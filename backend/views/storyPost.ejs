@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>post</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    .title{
+      height: 60px;
+      width: 500px;
+      text-indent: 30px;
+      margin: 10px;
+      border-radius: 10px;
+      outline: none;
+      border:none;
+    }
+    .description{
+      height: 60px;
+      width: 500px;
+      margin: 10px;
+      text-indent: 30px;
+      border-radius: 10px;
+      outline: none;
+      border:none;
+    }
+    .story{
+      height: 250px;
+      width: 500px;
+      margin: 10px;
+      padding-top: 10px;
+      text-indent: 30px;
+      border-radius: 10px;
+      outline: none;
+      border:none;
+    }
+    .selectCategory{
+      height: 60px;
+      width: 500px;
+      text-indent: 10px;
+      border-radius: 10px;
+      outline: none;
+      border:none;
+    }
+    
+    option{
+      background-color: #61dafb;
+      font-size: 20px;  
+    }
+    input:focus, textarea:focus, select:focus{
+      border:2px solid #61dafb;
+    }
+    .btnPost{
+       height: 60px;
+       width: 500px;
+       color: white;
+       font-size: 20px;
+       background-color: #003366;
+        border-radius: 10px;
+       outline: none;
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/return_home">Home</a></li>
+        <li class="active"><a href="#">post</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin" class="btn-lg">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <div class="jumbotron">
+    <div align="center">
+      <form method="post" action="/postStory">
+        <input type="text" name="title" class="title" placeholder="Title" required><br>
+        <select class="selectCategory" name="category" required>
+          <option value="">--select category--</option>
+          <option value="Culture">Culture</option>
+          <option value="Politics">Politics</option>
+          <option value="News">News</option>
+          <option value="Movies">Movies</option>
+          <option value="Technology">Technology</option>
+          <option value="Design">Design</option>
+          <option value="Sports">Sports</option>
+          <option value="Jobs">Jobs</option>
+          <option value="Railways">Railways</option>
+          <option value="Health">Health</option>
+        </select><br>
+        <input type="text" name="description" class="description" placeholder="Description" required><br>
+        <textarea class="story" name="story" placeholder="Story here......" required></textarea><br>
+        <input type="submit" value="Post" class="btnPost">
+      </form>
+
+    </div>
+  </div>
+
+<footer class="container-fluid text-center">
+  <p>medium@co.in</p>
+</footer>
+
+</body>
+</html>
